@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nairobi Stays | Premium Listings</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FF385C">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-house-chimney-window"></i> Nairobi Stays
+        </div>
+        <a href="https://wa.me/254700000000" class="nav-btn">
+            <i class="fa-brands fa-whatsapp"></i> Partner With Us
+        </a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">✨ Verified Listings</span>
+            <h1>Find Your Perfect Home.</h1>
+            <p>Curated stays in Kilimani, Westlands, and Kileleshwa. Direct booking.</p>
+        </div>
+    </header>
+
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All Stays</button>
+        <button class="filter-btn" data-filter="kilimani">Kilimani</button>
+        <button class="filter-btn" data-filter="westlands">Westlands</button>
+        <button class="filter-btn" data-filter="kileleshwa">Kileleshwa</button>
+        <button class="filter-btn" data-filter="budget">Budget Deals</button>
+    </div>
+
+    <section id="listings" class="container">
+        </section>
+
+    <footer>
+        <p>&copy; 2026 Nairobi Stays. <br> <span style="font-size:0.8rem; opacity:0.7">Prices subject to change by host.</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+    
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(() => console.log('App Service Worker Registered'))
+            .catch((err) => console.log('SW Failed', err));
+        });
+      }
+    </script>
+</body>
+</html>
