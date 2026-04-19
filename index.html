@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nairobi Stays | Luxury Short Stays</title>
+    <meta name="description" content="Premium verified short-stay apartments in Kilimani, Westlands, and Kileleshwa. Direct booking, no commission.">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#C8A96E">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ======================================
+         GOOGLE ANALYTICS 4
+         IMPORTANT: Replace G-XXXXXXXXXX with
+         your real Measurement ID from:
+         analytics.google.com → Admin → Data Streams
+    ======================================= -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', {
+        page_title: 'Nairobi Stays - Home',
+        send_page_view: true
+      });
+      // Make gtag globally available for event tracking in script.js
+      window._gtag = gtag;
+    </script>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <a class="logo" href="#">
+            <span class="logo-icon"><i class="fa-solid fa-house-chimney-window"></i></span>
+            <span>Nairobi<strong>Stays</strong></span>
+        </a>
+        <div class="nav-links">
+            <a href="#listings" class="nav-link">Listings</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="https://wa.me/254115915556?text=Hi!%20I%20want%20to%20list%20my%20property%20on%20Nairobi%20Stays" target="_blank" class="nav-cta">
+                <i class="fa-brands fa-whatsapp"></i> List Your Property
+            </a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#listings">Listings</a>
+        <a href="#about">About</a>
+        <a href="https://wa.me/254115915556" target="_blank" class="mobile-cta"><i class="fa-brands fa-whatsapp"></i> List Your Property</a>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <video class="hero-video" autoplay muted loop playsinline src="assets/video.mp4"></video>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span> Verified Listings · Nairobi
+            </div>
+            <h1 class="hero-headline">
+                <em>Live</em> the City.<br>Your Way.
+            </h1>
+            <p class="hero-sub">Hand-picked apartments in Kilimani, Westlands & Kileleshwa.<br>Direct booking. No hidden fees.</p>
+            <div class="hero-actions">
+                <a href="#listings" class="btn-primary">Browse Stays</a>
+                <a href="https://wa.me/254115915556" target="_blank" class="btn-ghost"><i class="fa-brands fa-whatsapp"></i> Instant Enquiry</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Verified Stays</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">3</span><span class="stat-label">Prime Locations</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Direct Booking</span></div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Verified Properties</div>
+        <div class="trust-item"><i class="fa-solid fa-bolt"></i> Instant WhatsApp Booking</div>
+        <div class="trust-item"><i class="fa-solid fa-tag"></i> Best Price Guarantee</div>
+        <div class="trust-item"><i class="fa-solid fa-star"></i> Guest-Rated</div>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="section-header">
+        <h2 class="section-title">Our <em>Curated</em> Stays</h2>
+        <p class="section-sub">Filter by neighbourhood or budget</p>
+    </div>
+
+    <div class="filter-container" id="filters">
+        <button class="filter-btn active" data-filter="all">
+            <i class="fa-solid fa-border-all"></i> All Stays
+        </button>
+        <button class="filter-btn" data-filter="kilimani">
+            <i class="fa-solid fa-map-pin"></i> Kilimani
+        </button>
+        <button class="filter-btn" data-filter="westlands">
+            <i class="fa-solid fa-map-pin"></i> Westlands
+        </button>
+        <button class="filter-btn" data-filter="kileleshwa">
+            <i class="fa-solid fa-map-pin"></i> Kileleshwa
+        </button>
+        <button class="filter-btn" data-filter="budget">
+            <i class="fa-solid fa-fire"></i> Budget Deals
+        </button>
+    </div>
+
+    <!-- LISTINGS -->
+    <section id="listings" class="container"></section>
+
+    <!-- ABOUT / WHY US -->
+    <section id="about" class="why-section">
+        <div class="why-inner">
+            <div class="why-text">
+                <span class="section-label">Why Nairobi Stays?</span>
+                <h2>Skip the Middlemen.<br><em>Book Direct. Save More.</em></h2>
+                <p>Every listing on Nairobi Stays is personally verified. We work directly with hosts to bring you the best short-stay experience in Nairobi's most vibrant neighbourhoods — at prices that make sense.</p>
+                <ul class="why-list">
+                    <li><i class="fa-solid fa-check"></i> No booking fees or commissions</li>
+                    <li><i class="fa-solid fa-check"></i> Real photos & videos — no stock imagery</li>
+                    <li><i class="fa-solid fa-check"></i> Instant response via WhatsApp</li>
+                    <li><i class="fa-solid fa-check"></i> Flexible check-in / check-out</li>
+                </ul>
+                <a href="https://wa.me/254115915556?text=Hi!%20I%20want%20to%20list%20my%20property" target="_blank" class="btn-primary">List Your Property →</a>
+            </div>
+            <div class="why-visual">
+                <div class="why-card-stack">
+                    <div class="why-card wc1">
+                        <i class="fa-solid fa-house"></i>
+                        <span>50+ Stays</span>
+                    </div>
+                    <div class="why-card wc2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>3 Neighbourhoods</span>
+                    </div>
+                    <div class="why-card wc3">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>Instant Booking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo-icon"><i class="fa-solid fa-house-chimney-window"></i></span>
+                <span>Nairobi<strong>Stays</strong></span>
+            </div>
+            <p class="footer-tagline">Premium short stays. Direct booking. No hassle.</p>
+            <div class="footer-links">
+                <a href="https://wa.me/254115915556" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="#listings">Listings</a>
+                <a href="#about">About</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Nairobi Stays &nbsp;·&nbsp; <span>Prices subject to change by host</span> &nbsp;·&nbsp; <a href="analytics.html" style="color:inherit;opacity:0.4;text-decoration:none;font-size:0.7rem;" title="Admin">&#9679; Analytics</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(() => console.log('SW Registered'))
+            .catch(err => console.log('SW Failed', err));
+        });
+      }
+    </script>
+</body>
+</html>
