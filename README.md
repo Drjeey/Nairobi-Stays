@@ -1,2 +1,0 @@
-# Nairobi-Stays
-airbnb website
